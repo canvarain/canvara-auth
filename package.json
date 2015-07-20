@@ -1,0 +1,49 @@
+{
+  "name": "@canvara/canvara-auth",
+  "description": "canvara: common authentication module",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Ritesh Sangwan",
+    "email": "sangwan.ritesh@yahoo.in"
+  },
+  "keywords": [
+    "canvara",
+    "winston",
+    "authentication",
+    "express",
+    "middleware"
+  ],
+  "bugs": {
+    "url": "https://github.com/billidin/canvara-auth/issues"
+  },
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billidin/canvara-auth.git"
+  },
+  "homepage": "https://github.com/billidin/canvara-auth",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "express": "^4.13.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-env": "^0.4.1",
+    "grunt-mocha-test": "^0.10.2",
+    "load-grunt-tasks": "^0.4.0",
+    "mocha": "1.21.4",
+    "supertest": "^1.0.1"
+  },
+  "engines": {
+    "node": "0.12.x"
+  },
+  "files": [
+    "Readme.md",
+    "lib",
+    "index.js"
+  ],
+  "scripts": {}
+}
