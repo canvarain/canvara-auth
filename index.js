@@ -14,13 +14,17 @@
  * @private
  */
 var tokenStrategy = require('./lib/TokenStrategy'),
+  _ = require('lodash'),
   keyStrategy = require('./lib/KeyStrategy');
 
 function CanvaraAuth(opts) {
-  this.options = opts || {};
+  if(!opts || !opts.jwtSecret) {
+    throw new Error('Jwt secret is required');
+  }
+  this.options = opts;
 }
 
-CanvaraAuth.prototype.strategy = {
+CanvaraAuth.strategy = {
   token: 'token',
   apiKey: 'apiKey'
 };
@@ -33,9 +37,10 @@ CanvaraAuth.prototype.strategy = {
  * @param   {Object}    req             config object
  */
 CanvaraAuth.prototype.process = function(config) {
-  if(config.strategy === this.strategy.token) {
+  _.extend(config, this.options);
+  if(config.strategy === CanvaraAuth.strategy.token) {
     return tokenStrategy(config);
-  } else if(config.strategy === this.strategy.apiKey) {
+  } else if(config.strategy === CanvaraAuth.strategy.apiKey) {
     return keyStrategy(config);
   } else {
     throw new Error('Unsupported authentication strategy');
