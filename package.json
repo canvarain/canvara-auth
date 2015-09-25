@@ -1,7 +1,7 @@
 {
   "name": "@canvara/canvara-auth",
   "description": "canvara: common authentication module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": {
     "name": "Ritesh Sangwan",
     "email": "sangwan.ritesh@yahoo.in"
@@ -45,6 +45,8 @@
   "files": [
     "Readme.md",
     "lib",
+    "LICENSE.md",
+    "HISTORY.md",
     "index.js"
   ],
   "scripts": {}
