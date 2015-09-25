@@ -2,7 +2,6 @@
   "name": "@canvara/canvara-auth",
   "description": "canvara: common authentication module",
   "version": "1.0.0",
-  "private": true,
   "author": {
     "name": "Ritesh Sangwan",
     "email": "sangwan.ritesh@yahoo.in"
